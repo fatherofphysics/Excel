@@ -38,7 +38,7 @@ def process_csv_files(src_folder, dest_folder):
             print(f"Copied {csv_file} to {dest_folder} (Detected Encoding: {encoding})")
 
 if __name__ == "__main__":
-    source_folder = input("Enter csv folder path: ")  # Change this to the path where your CSV files are located
-    destination_folder = "J"
+    source_folder = input("Enter csv folder path: ") 
+    destination_folder = input("Enter destination folder name: ")
 
     process_csv_files(source_folder, destination_folder)
