@@ -30,7 +30,7 @@ def process_csv_files(src_folder, dest_folder, dest_column):
             header = next(reader)
 
             # Check if the data goes up to column J
-            if len(header) >= 10:  # Assuming columns are zero-indexed
+            if len(header) >= dest_column:  # Assuming columns are zero-indexed
                 # No need to close the file here if you're just copying
                 pass
                 
@@ -42,4 +42,4 @@ if __name__ == "__main__":
     destination_folder = input("Enter destination folder name: ")
     destination_column = input("Enter numerical value of your column - \nStaring from 0: ") 
 
-    process_csv_files(source_folder, destination_folder, dest_column)
+    process_csv_files(source_folder, destination_folder, destination_column)
