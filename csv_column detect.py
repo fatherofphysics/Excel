@@ -18,7 +18,7 @@ def detect_encoding(file_path):
         result = chardet.detect(rawdata.read(100000))  # Adjust the read size as needed
     return result['encoding']
 
-def process_csv_files(src_folder, dest_folder):
+def process_csv_files(src_folder, dest_folder, dest_column):
     # Get all CSV files in the source folder
     csv_files = glob.glob(os.path.join(src_folder, '*.csv'))
 
@@ -40,5 +40,6 @@ def process_csv_files(src_folder, dest_folder):
 if __name__ == "__main__":
     source_folder = input("Enter csv folder path: ") 
     destination_folder = input("Enter destination folder name: ")
+    destination_column = input("Enter numerical value of your column - \nStaring from 0: ") 
 
-    process_csv_files(source_folder, destination_folder)
+    process_csv_files(source_folder, destination_folder, dest_column)
